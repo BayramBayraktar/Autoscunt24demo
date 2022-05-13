@@ -2,9 +2,9 @@ import React from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Layoutmain from '../../layouts'
 import Backbar from '../../components/turnback'
-import Card from '../../components/offer/card'
-import HeaderBar from '../../components/offer/offerdetails/header'
-import Detail from '../../components/offer/offerdetails/detailsection'
+import Card from '../../components/offer-card'
+import HeaderBar from '../../components/offer-header'
+import Detail from '../../components/offer-detailsection'
 
 
 

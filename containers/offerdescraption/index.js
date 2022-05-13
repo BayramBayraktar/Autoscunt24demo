@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../../components/offer/offerdetails/header'
-import DetailSection from '../../components/offer/offerdetails/detailsection'
+import Header from '../../components/offer-header'
+import DetailSection from '../../components/offer-detailsection'
 const index = () => {
   return (
     <>

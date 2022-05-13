@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { FilterContext } from '../../../Context/FilterContext'
+import { FilterContext } from '../../context/filtercontext.js'
 import OutsideClickHandler from 'react-outside-click-handler'
 import axios from 'axios';
-import CarsTops from '../../data/cars/tops.json'
-import CarsOther from '../../data/cars/outher.json'
-import CarBody from '../../data/carbody/index.json'
-import Countrys from '../../data/filtercountrys/index.json'
-import Years from '../../data/years/index.json'
-import Prices from '../../data/price/index.json'
-import FuelTypes from '../../data/fueltype/index.json'
-import Gears from '../../data/gear/index.json'
+import CarsTops from '../data/cars/tops.json'
+import CarsOther from '../data/cars/outher.json'
+import CarBody from '../data/carbody/index.json'
+import Countrys from '../data/filtercountrys/index.json'
+import Years from '../data/years/index.json'
+import Prices from '../data/price/index.json'
+import FuelTypes from '../data/fueltype/index.json'
+import Gears from '../data/gear/index.json'
 import {
     Wrapper,
     MobileWrapper,
@@ -110,7 +110,7 @@ const List = () => {
             selectedGear
         )
 
-        
+
 
 
     }, [SelectCar, SelectModel, SelectedBody, FirstTo, FirstFrom, PriceFrom, PriceTo, SelectedCountry, selectedFueltype, selectedGear])
