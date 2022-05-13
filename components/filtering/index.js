@@ -71,7 +71,7 @@ const Index = ({ data }) => {
 
         if (!SelectedCar) {
             (async () => {
-                await axios.get(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/lst?pricefrom=${SelectedPrice}`, { withCredentials: true }).then(res => {
+                await axios.get(`https://createpage2.herokuapp.com/lst?pricefrom=${SelectedPrice}`, { withCredentials: true }).then(res => {
                     setResult(res.data)
                 })
             })()
