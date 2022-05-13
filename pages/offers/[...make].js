@@ -1,6 +1,6 @@
 import React from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Layoutmain from '../../Layouts/Main'
+import Layoutmain from '../../layouts'
 import Backbar from '../../Components/TurnBack'
 import Card from '../../Components/Offer/Card'
 import HeaderBar from '../../Components/Offer/OfferDetails/Header'
@@ -17,7 +17,7 @@ export const getServerSideProps = async (contex) => {
     const id = contex.query.id
 
     if (make && model && id) {
-        const data = await fetch(`http://localhost:5000/offers/${make}/${model}?id=${id}`)
+        const data = await fetch(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/offers/${make}/${model}?id=${id}`)
         lstData = await data.json()
     }
 

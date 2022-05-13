@@ -77,7 +77,7 @@ const index = ({ Data, User }) => {
                 <SliderWrapper>
                     <Slider {...settings}>
                         {Data.photos.map(img => (
-                            <Sliderİmg src={`http://localhost:5000/Uploads/img/${img}`} alt="" />
+                            <Sliderİmg src={`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/Uploads/img/${img}`} alt="" />
 
                         ))}
                     </Slider>

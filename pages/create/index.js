@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Create from '../../Containers/Create'
 import axios from 'axios'
-import { redirect } from 'next/dist/server/api-utils'
 
 //Create Page
 export default () => {
@@ -15,9 +14,10 @@ export default () => {
 
     useEffect(() => {
         (async () => {
-            await axios.get('http://localhost:5000/create', { withCredentials: true })
+            await axios.get(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/create`)
                 .then((response) => {
-                    response.data == "successful" ? setVerify(true) : setVerify(false) & router.push('/')
+                    console.log(response)
+                    response == "successful" ? setVerify(true) : setVerify(false) & router.push('/')
                 })
                 .catch((err) => console.log(err))
         })()
@@ -25,33 +25,8 @@ export default () => {
     })
 
     return (
-        Verify && <Create />
+        true && <Create />
     )
 }
 
 
-/* 
-export async function getServerSideProps() {
-
-
-    const loggedin = false
-
-    if (loggedin) {
-        return {
-            redirect: {
-                destination: '/',
-                permanent: false,
-            },
-        }
-    }
-
-    return {
-        props: {
-            loggedin,
-        }
-    }
-}
-
-
-
- */

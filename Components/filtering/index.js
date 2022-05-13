@@ -29,8 +29,7 @@ import {
 } from './style'
 import axios from 'axios';
 
-const Index = () => {
-
+const Index = ({ data }) => {
     const router = useRouter()
     const { t } = useTranslation()
 
@@ -61,7 +60,6 @@ const Index = () => {
 
 
     useEffect(() => {
-
         setSearchResultTop(TopCars.filter(car => {
             return car.brand.toUpperCase().includes(SelectedCar.toUpperCase())
         }))
@@ -70,25 +68,27 @@ const Index = () => {
             return Car.brand.toUpperCase().includes(SelectedCar.toUpperCase())
         }))
 
+
         if (!SelectedCar) {
             (async () => {
-                await axios.get(`http://localhost:5000/lst?pricefrom=${SelectedPrice}`, { withCredentials: true }).then(res => {
+                await axios.get(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/lst?pricefrom=${SelectedPrice}`, { withCredentials: true }).then(res => {
                     setResult(res.data)
                 })
             })()
         }
         if (SelectedCar) {
             (async () => {
-                await axios.get(`http://localhost:5000/lst/${SelectedCar}?pricefrom=${SelectedPrice}`, { withCredentials: true }).then(res => setResult(res.data))
+                await axios.get(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/lst/${SelectedCar}?pricefrom=${SelectedPrice}`, { withCredentials: true }).then(res => setResult(res.data))
             })()
         }
         if (SelectedModel && SelectedCar) {
             (async () => {
-                await axios.get(`http://localhost:5000/lst/${SelectedCar}/${SelectedModel}?pricefrom=${SelectedPrice}`, { withCredentials: true }).then(res => setResult(res.data))
+                await axios.get(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/lst/${SelectedCar}/${SelectedModel}?pricefrom=${SelectedPrice}`, { withCredentials: true }).then(res => setResult(res.data))
             })()
         }
 
     }, [SelectedCar, SelectedModel, SelectedPrice])
+
 
 
     //Clearing the model input if the selected car value is equal to an empty value

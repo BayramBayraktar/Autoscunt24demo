@@ -70,7 +70,7 @@ const CreatePage = () => {
         formData.append('PostedByDescraption', PostedByDescraption)
 
 
-        await axios.post('http://localhost:5000/create', formData, { withCredentials: true }).then((response) => {
+        await axios.post(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/create`, formData ).then((response) => {
             if (response.data == "unsuccessful") {
                 router.push('/login')
             }

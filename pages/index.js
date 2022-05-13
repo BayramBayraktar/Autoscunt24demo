@@ -1,11 +1,9 @@
-import MainLayout from "../Layouts/Main";
+import MainLayout from "../layouts";
 import Homepage from '../Containers/HomePage'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 
 export const getStaticProps = async (context) => {
-
-  console.log()
 
   return {
     props: {

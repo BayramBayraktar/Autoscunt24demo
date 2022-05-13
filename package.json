@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "env": "^0.0.2",
     "js-cookie": "^3.0.1",
     "logrocket": "^2.2.1",
     "next": "12.1.0",

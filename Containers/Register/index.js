@@ -38,7 +38,7 @@ const Register = () => {
             address: address,
         }
 
-        await axios.post('http://localhost:5000/signup', Obj, { withCredentials: true }).then((response => (
+        await axios.post(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/signup`, Obj, { withCredentials: true }).then((response => (
             response.data.redirect == true && Router.push('/login')
         )))
 

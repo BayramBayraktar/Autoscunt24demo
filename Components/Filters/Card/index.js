@@ -31,7 +31,7 @@ const Card = ({ data }) => {
                 </CardButton>
             </CardTop>
             <CardCenter>
-                <Cardİmg src={`http://localhost:5000/Uploads/img/${data.photos[0]}`} alt='' />
+                <Cardİmg src={`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/Uploads/img/${data.photos[0]}`} alt='' />
                 <CardInfoContainerWrapper>
                     <CardPrice>{data.price}</CardPrice>
                     <CardInfoContainer>

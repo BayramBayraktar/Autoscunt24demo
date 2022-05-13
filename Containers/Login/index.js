@@ -28,21 +28,14 @@ const Register = () => {
             email: email,
             password: password
         }
-        await axios.post('http://localhost:5000/login', obj, { withCredentials: true }).then((response) => {
+
+        await axios.post(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/login`, obj).then((response) => {
             try {
-
                 if (response.data == "successful") {
-
-                    response.data == "successful" && Router.push('/create')
-
+                    Router.push('/create')
                 } else {
                     setMessage(response.data)
                 }
-
-
-
-
-
             } catch (error) {
                 console.log(error)
             }
@@ -68,7 +61,7 @@ const Register = () => {
 
                     <İnputContainer>
                         <Label id='password'>Password</Label>
-                        <İnput type="password" id='password' onChange={(e) => setpassword(e.target.value)} minLength="3"  required={password.length >= 1 && true} placeholder='password..' inputMode='numeric' name='password' />
+                        <İnput type="password" id='password' onChange={(e) => setpassword(e.target.value)} minLength="3" required={password.length >= 1 && true} placeholder='password..' inputMode='numeric' name='password' />
                         <span>{message == "notPassword" && "no such email record"}</span>
                     </İnputContainer>
 
