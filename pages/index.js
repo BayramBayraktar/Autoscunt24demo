@@ -1,5 +1,5 @@
 import MainLayout from "../layouts";
-import Homepage from '../containers/homePage'
+import Homepage from '../containers/homePage/index'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 
