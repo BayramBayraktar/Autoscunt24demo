@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import TurnBack from '../../components/turnback';
-import List from '../../components/filters/list'
-import Header from '../../components/filters/header'
-import Card from '../../components/filters/card'
-import { FilterContext } from '../../context/filtercontext'
+import List from '../../components/filters-list'
+import Header from '../../components/filters-header'
+import Card from '../../components/filters-card'
+import { FilterContext } from '../../context/filtercontext.js'
 
 
 import {
