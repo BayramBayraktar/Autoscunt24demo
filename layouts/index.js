@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Header from '../Components/header';
-import Footer from '../components/footer';
+import Header from '../Components/header/index.js';
+import Footer from '../components/footer/index.js';
 import { Layout} from './style'
 
 
