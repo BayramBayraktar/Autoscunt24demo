@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Header from '../Components/header/index.js';
+import Header from '../components/header/index.js';
 import Footer from '../components/footer/index.js';
 import { Layout} from './style'
 

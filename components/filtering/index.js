@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { useTranslation } from 'next-i18next'
-import TopCars from '../Data/Cars/Tops.json'
-import OtherCars from '../Data/Cars/Outher.json'
-import Years from '../Data/Years/index.json'
-import Prices from '../Data/Price/index.json'
-import Countrys from '../Data/FilterCountrys/index.json'
+import TopCars from '../data/cars/tops.json'
+import OtherCars from '../data/cars/outher.json'
+import Years from '../data/years/index.json'
+import Prices from '../data/price/index.json'
+import Countrys from '../data/filtercountrys/index.json'
 import {
     Wrapper,
     Container,

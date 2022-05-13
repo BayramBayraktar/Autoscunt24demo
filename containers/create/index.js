@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import OutsideClickHandler from 'react-outside-click-handler';
-import CarTops from '../../Components/Data/Cars/Tops.json'
-import CarOuther from '../../Components/Data/Cars/Outher.json'
-import Priceİnput from '../../mask/PriceInput'
-import KmInput from '../../mask/KmInput'
+import CarTops from '../../components/data/cars/tops.json'
+import CarOuther from '../../components/data/cars/outher.json'
+import Priceİnput from '../../mask/priceInput'
+import KmInput from '../../mask/kmınput'
 import axios from 'axios';
 
 

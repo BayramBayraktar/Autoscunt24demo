@@ -1,7 +1,7 @@
 import React from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import LayoutMain from '../../layouts'
-import ListPage from '../../Containers/lst/index'
+import ListPage from '../../containers/lst/index'
 
 
 export const getServerSideProps = async (contex) => {

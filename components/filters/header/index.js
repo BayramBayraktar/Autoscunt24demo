@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
-import { FilterContext } from '../../../Context/FilterContext.js'
-import TopMakes from '../../Data/Cars/Tops.json'
+import { FilterContext } from '../../../context/filterContext.js'
+import TopMakes from '../../data/cars/tops.json'
 import {
     Wrapper,
     HeaderTop,

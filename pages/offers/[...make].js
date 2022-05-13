@@ -1,10 +1,10 @@
 import React from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Layoutmain from '../../layouts'
-import Backbar from '../../Components/TurnBack'
-import Card from '../../Components/Offer/Card'
-import HeaderBar from '../../Components/Offer/OfferDetails/Header'
-import Detail from '../../Components/Offer/OfferDetails/DetailSection'
+import Backbar from '../../components/turnback'
+import Card from '../../components/offer/card'
+import HeaderBar from '../../components/offer/offerdetails/header'
+import Detail from '../../components/offer/offerdetails/detailsection'
 
 
 

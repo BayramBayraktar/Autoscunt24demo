@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Create from '../../Containers/Create'
+import Create from '../../containers/create'
 import axios from 'axios'
 
 //Create Page

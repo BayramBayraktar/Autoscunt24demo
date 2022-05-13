@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Filtering from '../../Components/filtering'
+import Filtering from '../../components/filtering'
 
 const Index = () => {
     return (

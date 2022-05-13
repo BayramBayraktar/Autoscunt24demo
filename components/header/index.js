@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import Router, { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import Countrys from '../Data/Country/index.json'
+import Countrys from '../data/country/index.json'
 
 
 import {

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import TurnBack from '../../Components/TurnBack';
-import List from '../../Components/Filters/List'
-import Header from '../../Components/Filters/Header'
-import Card from '../../Components/Filters/Card'
-import { FilterContext } from '../../Context/FilterContext'
+import TurnBack from '../../components/turnback';
+import List from '../../components/filters/list'
+import Header from '../../components/filters/header'
+import Card from '../../components/filters/card'
+import { FilterContext } from '../../context/filtercontext'
 
 
 import {
