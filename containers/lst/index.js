@@ -27,10 +27,6 @@ const ListPage = (props) => {
     const [MobileMenu, setMobilMenu] = useState(false)
 
 
-
-
-
-
     const handleFilterSelectedChange = async (
         SelectCar,
         SelectModel,
