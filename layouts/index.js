@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Header from '../Components/Header';
-import Footer from '../components/Footer';
-import { Layout } from './style'
+import Header from '../Components/header';
+import Footer from '../components/footer';
+import { Layout} from './style'
 
 
 const MainLayout = ({ title, children }) => {
