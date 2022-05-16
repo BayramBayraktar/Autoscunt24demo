@@ -11,7 +11,7 @@ export const getServerSideProps = async (contex) => {
 
     const make = contex.params.lst[0]
     const model = contex.params.lst[1]
-    
+
 
 
     if (!make && !model) {
@@ -43,13 +43,12 @@ export const getServerSideProps = async (contex) => {
                 const lst = await fetch(`https://createpage2.herokuapp.com/lst/${make}`)
                 lstData = await lst.json()
             }
+
+
+
             if (contex.query.pricefrom) {
-                if (contex.query.priceto) {
-                    if (model) {
-                        const lst = await fetch(`https://createpage2.herokuapp.com/lst/${make}/${model}?pricefrom=${contex.query.pricefrom}&priceto=${contex.query.priceto}`)
-                        lstData = await lst.json()
-                    }
-                    const lst = await fetch(`https://createpage2.herokuapp.com/lst/${make}?pricefrom=${contex.query.pricefrom}&priceto=${contex.query.priceto}`)
+                if (make) {
+                    const lst = await fetch(`https://createpage2.herokuapp.com/lst/${make}?pricefrom=${contex.query.pricefrom}`)
                     lstData = await lst.json()
                 }
 
@@ -57,6 +56,19 @@ export const getServerSideProps = async (contex) => {
                     const lst = await fetch(`https://createpage2.herokuapp.com/lst/${make}/${model}?pricefrom=${contex.query.pricefrom}`)
                     lstData = await lst.json()
                 }
+
+                if (contex.query.priceto) {
+                    if (model) {
+                        const lst = await fetch(`https://createpage2.herokuapp.com/lst/${make}/${model}?pricefrom=${contex.query.pricefrom}&priceto=${contex.query.priceto}`)
+                        lstData = await lst.json()
+                    }
+                    const lst = await fetch(`https://createpage2.herokuapp.com/lst/${make}?pricefrom=${contex.query.pricefrom}&priceto=${contex.query.priceto}`)
+                    lstData = await lst.json()
+
+
+                }
+
+
 
             }
 
