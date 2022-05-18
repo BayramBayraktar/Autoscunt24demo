@@ -48,7 +48,7 @@ export const getServerSideProps = async (contex) => {
 
             if (contex.query.pricefrom) {
                 if (make) {
-                    const lst = await fetch(`https://createpage2.herokuapp.com/lst/${make}?pricefrom=${contex.query.pricefrom}`)
+                    const lst = await fetch(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/${make}?pricefrom=${contex.query.pricefrom}`)
                     lstData = await lst.json()
                 }
 
